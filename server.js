@@ -4,10 +4,10 @@ import fs from "fs";
 import path from "path";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 //------------------------------------------------------
-// GET /localhost?file=cat.zip
+// GET /tester?file=cat.zip
 //------------------------------------------------------
 app.get("/tester", (req, res) => {
   const { file } = req.query;
