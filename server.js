@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 3000;
 //------------------------------------------------------
 // GET /tester?file=cat.zip
 //------------------------------------------------------
-app.get("/tester", (req, res) => {
-  const { file } = req.query;
+app.get("/:file/tester", (req, res) => {
+  const { file } = req.params;
   if (!file) {
     return res.status(400).send("Missing file param");
   }
